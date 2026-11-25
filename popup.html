@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PolitiCheck</title>
+  <style>
+    body {
+      width: 300px;
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    .header {
+      padding: 16px;
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: #fff;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .header p {
+      margin: 4px 0 0;
+      font-size: 12px;
+      opacity: 0.85;
+    }
+
+    .section {
+      padding: 14px;
+    }
+
+    .status,
+    #result {
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .status.on,
+    .result-real {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .status.off,
+    .result-fake,
+    .result-error {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 100px;
+      box-sizing: border-box;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 10px;
+      resize: vertical;
+      font: inherit;
+      background: #fff;
+      color: inherit;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border: 0;
+      border-radius: 10px;
+      background: #1d4ed8;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .meta {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #475569;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>TrustX</h1>
+    <p>FastText + XGBoost tweet checker</p>
+  </div>
+
+  <div class="section">
+    <div id="status" class="status off">Checking backend...</div>
+
+    <textarea
+      id="txt"
+      placeholder="Paste tweet text or any political claim here..."
+    ></textarea>
+
+    <button id="analyse-btn">Analyse Text</button>
+
+    <div id="result" hidden></div>
+
+    <div class="meta">
+      Keep the Python API running on <code>http://127.0.0.1:5000</code> before using the extension.
+    </div>
+  </div>
+
+  <script src="popup (1).js"></script>
+</body>
+</html>

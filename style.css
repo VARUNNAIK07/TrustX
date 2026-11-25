@@ -1,0 +1,54 @@
+.pc-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.pc-label {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.pc-pending {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.pc-fake {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.pc-real {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.pc-error {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.pc-score {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.pc-reasons {
+  font-size: 11px;
+  color: #475569;
+  line-height: 1.35;
+}

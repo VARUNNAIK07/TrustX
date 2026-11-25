@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "TrustX",
+  "version": "1.1",
+  "description": "Provides credibility insights for tweets on X (Twitter)",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": [
+    "*://twitter.com/*",
+    "*://x.com/*",
+    "http://localhost:5000/*",
+    "http://127.0.0.1:5000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*", "*://x.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "TweetX"
+  }
+}
